@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <ImageView
+       android:layout_gravity="left|top"
+        android:id="@+id/imv_dept_choosed"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_dept_choosed"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_item_member_add_dept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/title_bg"
+            android:background="@null"
+            android:gravity="center"
+            android:maxEms="4"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_16_size"/>
+<EditText
+    android:id="@+id/edt_item_member_add_dept"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="产品"
+    android:textColor="@color/title_bg"
+    android:background="@null"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:textSize="@dimen/font_16_size"/>
+    </FrameLayout>
+    <ImageView
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_dept_choosed"/>
+</LinearLayout>

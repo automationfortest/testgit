@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/lly_more_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/padding_6"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/tv_more_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关于我们"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:src="@mipmap/img_callcar_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_menu_help"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/tv_more_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="帮助中心"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:src="@mipmap/img_callcar_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_menu_service_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="服务协议"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:src="@mipmap/img_callcar_arrow" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="安全退出"
+        android:textColor="@color/btn_black_font"
+        android:textSize="@dimen/font_16_size" />
+</LinearLayout>

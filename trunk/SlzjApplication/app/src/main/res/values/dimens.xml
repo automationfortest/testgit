@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tabhost_margintop">3dp</dimen>
+    <dimen name="tabhost_marginbottpm">3dp</dimen>
+    <dimen name="dialog_white_width">280dp</dimen>
+    <!-- 圆角imageview的圆角大小 -->
+    <dimen name="roundangle_imageview_radius">3dp</dimen>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="padding_13">13dp</dimen>
+    <dimen name="padding_53">53dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_28">28dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="et_height_35">35dp</dimen>
+    <dimen name="btn_height_42">42dp</dimen>
+    <dimen name="delete_view_height_70">70dp</dimen>
+    <dimen name="delete_view_height_45">45dp</dimen>
+    <dimen name="delete_view_height_65">65dp</dimen>
+    <dimen name="logo_margin">108dp</dimen>
+    <dimen name="btn_height_50">50dp</dimen>
+    <dimen name="img_length">60dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_57">57dp</dimen>
+    <dimen name="line_height">0.5dp</dimen>
+    <dimen name="top_view_height">23dp</dimen>
+
+
+    <!-- font-size -->
+    <dimen name="font_10_size">10sp</dimen>
+    <dimen name="font_11_size">11sp</dimen>
+    <dimen name="font_12_size">12sp</dimen>
+    <dimen name="font_14_size">14sp</dimen>
+    <dimen name="font_15_size">15sp</dimen>
+    <dimen name="font_17_size">17sp</dimen>
+    <dimen name="font_16_size">16sp</dimen>
+    <dimen name="font_16_size_true">16sp</dimen>
+    <dimen name="font_20_size">20sp</dimen>
+    <dimen name="font_22_size">22sp</dimen>
+    <dimen name="font_24_size">24sp</dimen>
+    <dimen name="font_30_size">30sp</dimen>
+    <dimen name="font_50_size">50sp</dimen>
+    <!-- head_icon_stroke -->
+    <dimen name="stroke_5">5dp</dimen>
+
+
+    <!-- 字母排序 -->
+    <dimen name="indexbarview_margin">0dp</dimen>
+    <dimen name="indexbarview_textsize">16dp</dimen>
+    <dimen name="indexbarview_width">20dp</dimen>
+
+</resources>

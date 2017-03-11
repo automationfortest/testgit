@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <WebView
+        android:id="@+id/wv_service_explain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_5"
+        android:layout_marginRight="@dimen/padding_5"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

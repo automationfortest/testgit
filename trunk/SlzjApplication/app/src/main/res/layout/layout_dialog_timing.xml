@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef">
+<TextView
+    android:paddingTop="@dimen/padding_20"
+    android:paddingBottom="@dimen/padding_20"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="您附近车辆较为紧张，长时间未有司机应答是否升级车型？"
+    android:gravity="center"
+    />
+    <LinearLayout
+        android:layout_marginTop="@dimen/padding_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_dialog_timing_left"
+            android:text="继续等待"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height_50"
+            android:layout_weight="1"
+            android:textColor="@color/title_bg"/>
+        <Button
+            android:id="@+id/btn_dialog_timing_right"
+            android:text="升级车型"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height_50"
+            android:layout_weight="1"
+            android:textColor="@color/title_bg"/>
+    </LinearLayout>
+
+</LinearLayout>

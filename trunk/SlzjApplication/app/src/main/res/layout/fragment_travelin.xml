@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="slzjandroid.slzjapplication.activity.DriverFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/status_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="26dp"/>
+
+    </LinearLayout>
+</FrameLayout>

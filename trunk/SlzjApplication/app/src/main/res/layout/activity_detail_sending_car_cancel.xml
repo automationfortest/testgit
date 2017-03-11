@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <FrameLayout
+        android:id="@+id/fly_road"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imv_sendingcar_road_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/img_carordering_road"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imv_sendingcar_road_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/img_carordering_road"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_sending_car_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_15"
+            android:text="已取消"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_20_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="@dimen/btn_height_50"
+            android:paddingTop="@dimen/padding_22">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="乘   车   人"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_cellphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_10"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车          型"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_cartype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="费 用 归 属"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_costs_attributable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用 车 原 因"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出   发   地"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_adress_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目   的   地"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_adress_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="叫 车 时 间"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_sendingcar_call_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_20"
+        android:paddingTop="@dimen/padding_28">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/img_carordering_bg_arrow" />
+
+        <LinearLayout
+            android:id="@+id/lly_sending_car_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/padding_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付金额"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_14_size" />
+
+            <TextView
+                android:id="@+id/tv_sendingcar_pre_coast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_20_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_14_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

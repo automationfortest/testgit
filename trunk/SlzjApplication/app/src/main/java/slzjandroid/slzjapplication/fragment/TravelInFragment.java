@@ -1,0 +1,175 @@
+package slzjandroid.slzjapplication.fragment;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+import slzjandroid.slzjapplication.R;
+import slzjandroid.slzjapplication.customView.NavigationView;
+import slzjandroid.slzjapplication.dto.LoginUser;
+import slzjandroid.slzjapplication.dto.OrderCarResponse;
+import slzjandroid.slzjapplication.dto.OrderDetailInfo;
+import slzjandroid.slzjapplication.helper.SPLoginUser;
+import slzjandroid.slzjapplication.service.ServiceProvider;
+import slzjandroid.slzjapplication.utils.ToastUtils;
+
+/**
+ * Created by hdb on 2016/4/5.
+ */
+public class TravelInFragment extends BaseFragment implements NavigationView.ClickCallback {
+    private TextView tv_travelin_status, tv_travelin_driver_name, tv_travelin_cartype, tv_travelin_car_num, tv_travelin_passenger, tv_travelin_cellphone, tv_travelin_costs_attributable, tv_travelin_reason, tv_travelin_adress_from, tv_travelin_adress_to, tv_travelin_geton_time, tv_travelin_getdown_time, tv_travelin_pre_coast;
+    private OrderDetailInfo orderDetailInfo;
+    private Timer pollingTimer = new Timer();
+    private PollingTask pollingTask;
+    private LoginUser loginUser = null;
+    private LinearLayout lly_travelin_coast;
+    private Context mContext;
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_order_end;
+    }
+
+    @Override
+    protected void findViews() {
+        tv_travelin_status = (TextView) findViewById(R.id.tv_travelin_status);
+        tv_travelin_driver_name = (TextView) findViewById(R.id.tv_travelin_driver_name);
+        tv_travelin_cartype = (TextView) findViewById(R.id.tv_travelin_cartype);
+        tv_travelin_car_num = (TextView) findViewById(R.id.tv_travelin_car_num);
+        tv_travelin_cellphone = (TextView) findViewById(R.id.tv_travelin_cellphone);
+        tv_travelin_costs_attributable = (TextView) findViewById(R.id.tv_travelin_costs_attributable);
+        tv_travelin_reason = (TextView) findViewById(R.id.tv_travelin_reason);
+        tv_travelin_adress_from = (TextView) findViewById(R.id.tv_travelin_adress_from);
+        tv_travelin_adress_to = (TextView) findViewById(R.id.tv_travelin_adress_to);
+        tv_travelin_geton_time = (TextView) findViewById(R.id.tv_travelin_geton_time);
+        tv_travelin_getdown_time = (TextView) findViewById(R.id.tv_travelin_getdown_time);
+        tv_travelin_pre_coast = (TextView) findViewById(R.id.tv_travelin_pre_coast);
+        lly_travelin_coast = (LinearLayout) findViewById(R.id.lly_travelin_coast);
+    }
+
+    @Override
+    protected void bindViews() {
+    }
+
+    @Override
+    protected void init() {
+
+        NavigationView navigationView = (NavigationView) super.findViewById(R.id.nav_main);
+        navigationView.setTitle("订单详情");
+        navigationView.setRightViewIsShow(false);
+        navigationView.setClickCallback(this);
+
+        lly_travelin_coast.setVisibility(View.INVISIBLE);
+        mContext = getActivity();
+        loginUser = LoginUser.getUser();
+        this.pollingTask = new PollingTask();
+        orderDetailInfo = (OrderDetailInfo) getArguments().getSerializable("orderresult");
+        tv_travelin_driver_name.setText(orderDetailInfo.getDriverName());
+        tv_travelin_cartype.setText(orderDetailInfo.getDriverCarType());
+        tv_travelin_car_num.setText(orderDetailInfo.getDriverCard());
+        tv_travelin_passenger.setText(orderDetailInfo.getPassengerName());
+        tv_travelin_cellphone.setText(orderDetailInfo.getPassengerPhone());
+        tv_travelin_costs_attributable.setText(orderDetailInfo.getDeptName());
+        tv_travelin_reason.setText(orderDetailInfo.getReasonName());
+        tv_travelin_adress_from.setText(orderDetailInfo.getDepartureName());
+        tv_travelin_adress_to.setText(orderDetailInfo.getDestinationName());
+        tv_travelin_geton_time.setText(orderDetailInfo.getBeginChargeTime());
+        tv_travelin_getdown_time.setText(orderDetailInfo.getFinishTime());
+        tv_travelin_pre_coast.setText(orderDetailInfo.getTotalPrice());
+        startPolling();
+
+    }
+
+    //获取订单状态
+    private void getOrderStatus() {
+        try {
+            Map<String, String> options = new HashMap<>();
+            options.put("access_token", loginUser.getAccessToken());
+            options.put("orderID", SPLoginUser.getOrderId(getActivity()));
+            ServiceProvider.carOrderService.getOrderStatus(options, new Callback<OrderCarResponse>() {
+                @Override
+                public void success(OrderCarResponse orderResult, Response response) {
+                    if (orderResult.getResult().getOrderStatus().equals("500")) {
+                        //跳转行程中页
+                        // tv_travelin_pre_coast.setText(orderResult.getResult().getEstimatePrice());
+
+                    } else if (orderResult.getResult().getOrderStatus().equals("600")) {
+                        //跳转行程结束页
+
+                        tv_travelin_status.setText("已完成");
+                        lly_travelin_coast.setVisibility(View.VISIBLE);
+
+                    } else if (orderResult.getResult().getOrderStatus().equals("610")) {
+                        //异常结束跳转
+
+                        ToastUtils.showToast(mContext, "异常结束，请重新下单");
+                        ((Activity) mContext).getFragmentManager().popBackStack();
+                    } else if (orderResult.getResult().getOrderStatus().equals("700")) {
+                        //已支付页
+                        if (pollingTimer != null)
+                            pollingTimer.cancel();
+                        pollingTimer = null;
+                        if (pollingTask != null) {
+                            pollingTask.cancel();
+                            pollingTask = null;
+                        }
+                        lly_travelin_coast.setVisibility(View.VISIBLE);
+                        tv_travelin_status.setText("已完成");
+                        tv_travelin_pre_coast.setText(orderResult.getResult().getTotalPrice());
+                        tv_travelin_getdown_time.setText(orderResult.getResult().getFinishTime());
+                    }
+                }
+
+                @Override
+                public void failure(RetrofitError error) {
+                    //失败错误处理
+                    getActivity().getFragmentManager().popBackStack();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onBackClick() {
+        ((Activity) mContext).getFragmentManager().popBackStack();
+    }
+
+    @Override
+    public void onRightClick() {
+
+    }
+
+    public class PollingTask extends TimerTask {
+        public void run() {
+            getOrderStatus();
+        }
+    }
+
+    public void startPolling() {
+        pollingTimer.scheduleAtFixedRate(this.pollingTask, 0, 5000);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (pollingTimer != null)
+            pollingTimer.cancel();
+        pollingTimer = null;
+        if (pollingTask != null) {
+            pollingTask.cancel();
+            pollingTask = null;
+        }
+    }
+}

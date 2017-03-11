@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_ef"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_info_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_weight="0.7"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/padding_15"
+                    android:text="具有营业执照的机构或分支机构"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/font_16_size" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="@dimen/padding_1"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_ef" />
+
+                <TextView
+                    android:id="@+id/tv_chose_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/padding_5"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/font_16_size" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_agentidcard"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:digits="0,1,2,3,4,5,6,7,8,9,X"
+                android:hint="请输入经办人身份证号"
+                android:maxLength="18"
+                android:paddingLeft="@dimen/padding_15"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_16_size" />
+
+            <include layout="@layout/layout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_4"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginTop="@dimen/padding_15"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:text="经办人身份证原件和复印件拍在同一张照片内并上传"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginTop="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:text="注：请本人在经办人身份证复印件上签字"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_15"
+                    android:layout_marginTop="@dimen/padding_15"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/im_show_pic_one"
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/padding_8"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/demo_logo" />
+
+                    <Button
+                        android:id="@+id/btn_take_picture_one"
+                        android:layout_width="133dp"
+                        android:layout_height="@dimen/padding_40"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/padding_10"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:background="@drawable/shape_btn_bg"
+                        android:text="拍照上传"
+                        android:textColor="#FF600A"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_4"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_13">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_15"
+                        android:gravity="center|left"
+                        android:text="拍下经办人授权委托书图片并上传"
+                        android:textColor="#666666"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_5"
+                        android:gravity="center|left"
+                        android:text="注：请在经办人授权委托书上加盖红色公章"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_15"
+                    android:layout_marginTop="@dimen/padding_15"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/im_show_pic_two"
+                        android:layout_width="133dp"
+                        android:layout_height="133dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/padding_8"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/photo_logo" />
+
+                    <Button
+                        android:id="@+id/btn_take_picture_two"
+                        android:layout_width="133dp"
+                        android:layout_height="@dimen/padding_40"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/padding_10"
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:background="@drawable/shape_btn_bg"
+                        android:text="拍照上传"
+                        android:textColor="#FF600A"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_53"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:layout_marginTop="@dimen/padding_8"
+                android:background="@color/title_bg"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

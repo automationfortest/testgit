@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_6"
+        android:background="@color/white"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:text="手机号"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size"
+
+            />
+
+        <EditText
+            android:id="@+id/edt_member_edit_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:maxLength="11"
+            android:text="手机号"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:text="姓名"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size"
+
+            />
+
+        <EditText
+            android:id="@+id/edt_member_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:maxLength="10"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="角色"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_member_edit_character"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|center"
+            android:text="管理员"
+            android:textColor="@color/edt_gray_font"
+            android:textSize="@dimen/font_16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_edit_dept"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="所属部门"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/padding_10"
+            android:src="@mipmap/img_arrow_down" />
+
+        <TextView
+
+            android:id="@+id/tv_member_edit_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|center"
+            android:text="公司"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_edit_project"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp"
+        android:visibility="gone">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="所属项目"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_member_edit_project"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="right|center"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:src="@mipmap/img_arrow_right" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_use_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/padding_10"
+        android:drawableLeft="@mipmap/help_logo_bg"
+        android:drawablePadding="@dimen/padding_5"
+        android:text="使用规则" />
+
+    <include layout="@layout/layout_line" />
+
+    <ListView
+        android:id="@+id/lv_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_6"
+        android:layout_weight="1.5"
+        android:scrollbars="none"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="#00000000" />
+
+    <TextView
+        android:id="@+id/tv_look_verdue_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_40"
+        android:layout_marginTop="@dimen/padding_10"
+        android:gravity="center"
+        android:text="查看过期券"
+        android:textColor="@color/bg_btn_register"
+        android:textSize="20sp" />
+
+</LinearLayout>

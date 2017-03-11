@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@mipmap/not_overdue_bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_compon_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="用车劵"
+                android:textColor="@color/maroon"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_compon_num"
+                style="@style/compon_text"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@color/maroon"
+                android:padding="@dimen/padding_3"
+                android:text="760张"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_commpon_explain"
+                style="@style/compon_text"
+                android:layout_gravity="center"
+                android:background="@color/btn_yellow_font"
+                android:padding="@dimen/padding_5"
+                android:text="充5000反10000"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="有效期至2016-12-31"
+                android:textColor="@color/gray_public_textcolor_102"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:layout_weight="1"
+                android:textColor="@color/gainsboro"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:layout_marginTop="@dimen/padding_10"
+        android:background="@mipmap/dotted_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/padding_10"
+        android:layout_weight="0.7"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/maroon"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/maroon" />
+    </LinearLayout>
+
+
+</LinearLayout>

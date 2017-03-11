@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingBottom="@dimen/padding_8"
+        android:paddingTop="@dimen/padding_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_yellow_font"
+        android:gravity="center"
+        android:text="@string/register_warn"
+        android:textSize="@dimen/font_15_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_14"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_20"
+            android:paddingRight="@dimen/padding_20">
+
+            <TextView
+                android:id="@+id/tv_register_cellphone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/register_cellphone"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+            <TextView
+                android:id="@+id/tv_register_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_register_cellphone"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+        </RelativeLayout>
+
+        <include layout="@layout/edit_line_layout"></include>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:text="*"
+                android:textColor="@color/red" />
+
+
+            <EditText
+                android:id="@+id/edt_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:background="@null"
+                android:hint="@string/register_name"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/edit_line_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:text="*"
+                android:textColor="@color/red" />
+
+
+            <EditText
+                android:id="@+id/edt_register_comname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:background="@null"
+                android:hint="@string/register_company_name"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+        </RelativeLayout>
+
+        <include layout="@layout/edit_line_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:text="*"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/edt_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:background="@null"
+                android:hint="@string/register_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+        </RelativeLayout>
+
+        <include layout="@layout/edit_line_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edt_register_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/regsiter_city"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+            <ImageView
+                android:id="@+id/imv_register_city"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/padding_18"
+                android:src="@mipmap/img_register_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/edit_line_layout" />
+
+
+        <EditText
+            android:id="@+id/tv_register_invitation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="@string/register_invitation_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="@dimen/padding_15"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+
+        <include layout="@layout/edit_line_layout" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_email_report"
+        android:padding="@dimen/padding_5"
+        android:textColor="#e64620"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_10">
+
+        <CheckBox
+            android:id="@+id/cb_register_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:text="@string/register_read"
+            android:paddingLeft="@dimen/padding_4"
+            android:background="@null"
+            android:button="@drawable/checkbox_style"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+            android:id="@+id/tv_service_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/cb_register_agree"
+            android:text="@string/register_agreement"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_16_size" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_register_commit"
+        style="@style/common_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_53"
+        android:background="@color/btn_yellow_font"
+        android:text="@string/register_tv_register" />
+</LinearLayout>

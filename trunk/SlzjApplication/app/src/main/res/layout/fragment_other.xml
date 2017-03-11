@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_ef"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/info_title_bg"
+            android:gravity="center"
+            android:padding="@dimen/padding_6"
+            android:text="政府、事业单位、非盈利性组织等"
+            android:textColor="#2BA3F2" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_enterprisename"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@null"
+                android:hint="机构名称（与组织机构代码证上的名字一致）"
+                android:maxLength="60"
+                android:paddingLeft="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+            <include layout="@layout/layout_line" />
+
+
+            <EditText
+                android:id="@+id/et_registerno"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@null"
+                android:hint="组织机构代码（请填写完整的组织机构代码证件上的代码）"
+                android:maxLength="30"
+                android:paddingLeft="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+            <include layout="@layout/layout_line" />
+
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@null"
+                android:hint="注册地所在城市"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/padding_15"
+                android:textColor="@color/btn_black_font"
+                android:textSize="@dimen/font_16_size" />
+
+            <include layout="@layout/layout_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:layout_marginTop="@dimen/padding_4"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_15"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拍下组织机构代码证并上传"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:text="注：请在组织机构代码证复印件上手写或注明“仅用于钱包行云认证”文字，并加盖红色公章。"
+                    android:textColor="#999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/show_iv"
+                android:layout_width="133dp"
+                android:layout_height="133dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_8"
+                android:scaleType="fitXY"
+                android:src="@mipmap/photo_logo" />
+
+            <Button
+                android:id="@+id/btn_take_picture"
+                android:layout_width="133dp"
+                android:layout_height="@dimen/padding_40"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/shape_btn_bg"
+                android:text="拍照上传"
+                android:textColor="#FF600A"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_53"
+            android:layout_marginBottom="@dimen/padding_20"
+            android:layout_marginTop="@dimen/padding_8"
+            android:background="@color/title_bg"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</ScrollView>

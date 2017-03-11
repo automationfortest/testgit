@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lly_menu_member_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+
+    <LinearLayout
+        android:id="@+id/lly_member_info_waring"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30"
+        android:background="@color/title_yellow_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="当前认证状态为"
+            android:textColor="@color/btn_black_font" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="未认证"
+            android:textColor="@color/title_bg" />
+
+        <TextView
+            android:id="@+id/tv_member_info_realname_now"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="立即认证"
+            android:textColor="@color/title_text_bg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="公司名称"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <EditText
+
+            android:id="@+id/edt_memberinfo_com_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="@dimen/padding_1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="邮箱"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_memberinfo_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/edt_gray_font"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="企业规模"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_memberinfo_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/edt_gray_font"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="可用余额"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_memberinfo_blance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="冻结金额"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_freeze_amonut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="账户余额"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_account_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="可用券"
+            android:textColor="@color/btn_black_font"
+            android:textSize="@dimen/font_16_size" />
+
+        <TextView
+
+            android:id="@+id/tv_memberinfo_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_15_size" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_menu_member_info_commit"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="@dimen/padding_6"
+        android:layout_marginRight="@dimen/padding_6"
+        android:layout_marginTop="@dimen/padding_8"
+        android:background="@drawable/btn_shape_bg_red"
+        android:text="确认修改"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20_size"></Button>
+</LinearLayout>

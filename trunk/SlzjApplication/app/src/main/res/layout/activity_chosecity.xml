@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    tools:context=".activity.CityChoseActivity" >
+    <LinearLayout
+        android:id="@+id/lly_chose_adress_city"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/title_bg"
+        >
+        <ImageView
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="@dimen/padding_40"
+            android:paddingTop="@dimen/font_20_size"
+            android:id="@+id/imv_chose_adress_city_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/img_arrow_left"/>
+        <TextView
+            android:paddingTop="@dimen/font_20_size"
+            android:id="@+id/tv_chose_adress_title"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="选择城市"
+            android:textSize="@dimen/font_20_size"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="@dimen/padding_40"
+            android:paddingTop="@dimen/font_20_size"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/img_arrow_left"/>
+    </LinearLayout>
+    <TextView
+
+        android:layout_below="@id/lly_chose_adress_city"
+        android:id="@+id/tv_chose_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门城市"
+        android:textSize="@dimen/font_16_size"
+        android:textColor="@color/btn_black_font"
+        android:paddingLeft="@dimen/padding_15"
+        android:paddingRight="@dimen/padding_15"
+        android:paddingTop="10dp"/>
+    <LinearLayout
+        android:id="@+id/lly_gv_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/tv_chose_city">
+        <GridView
+
+            android:id="@+id/gv_chose_adress_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"></GridView>
+    </LinearLayout>
+
+    <ListView
+
+       android:layout_below="@+id/lly_gv_hot"
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <slzjandroid.slzjapplication.customView.QuickindexBar
+        android:id="@+id/slideBar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lly_chose_adress_city"
+        android:background="@color/white" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_zimu"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#ededed"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+</RelativeLayout>

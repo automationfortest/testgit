@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/lly_orderlist_chose"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/nav_main"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rly_orderlist_myorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_13"
+            android:paddingRight="@dimen/padding_13">
+
+            <TextView
+                android:id="@+id/tv_orderlist_myorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="我的订单"
+                android:textColor="@color/title_bg"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imv_orderlist_myorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/img_verified" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="@dimen/padding_1"
+            android:layout_height="25dp"
+            android:background="@color/gray_ef"></View>
+
+        <RelativeLayout
+            android:id="@+id/rly_orderlist_comorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_13"
+            android:paddingRight="@dimen/padding_13">
+
+            <TextView
+                android:id="@+id/tv_orderlist_comorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="企业订单"
+                android:textColor="@color/edt_gray_font"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imv_orderlist_comorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/img_verified" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <slzjandroid.slzjapplication.weights.listview.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/xlist_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lly_orderlist_chose"
+        android:cacheColorHint="#00000000"
+        android:divider="#19000000"
+        android:dividerHeight="4dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/bga_refresh_loding"
+        ptr:ptrMode="both" />
+
+
+    <slzjandroid.slzjapplication.weights.listview.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/xlist_total_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lly_orderlist_chose"
+        android:cacheColorHint="#00000000"
+        android:divider="#19000000"
+        android:dividerHeight="4dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/bga_refresh_loding"
+        ptr:ptrMode="both" />
+
+</RelativeLayout>

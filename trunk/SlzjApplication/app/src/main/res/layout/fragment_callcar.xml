@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lly_callcar_dept"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_dept" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <TextView
+                        android:id="@+id/tv_callcar_dept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:textColor="@color/btn_black_font"
+                        android:textSize="@dimen/font_16_size" />
+
+                    <ImageView
+                        android:id="@+id/imv_callcar_dept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/padding_10"
+                        android:src="@mipmap/img_callcar_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_1"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"></View>
+
+                <LinearLayout
+                    android:id="@+id/lly_callcar_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_reason" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <TextView
+                        android:id="@+id/tv_callcar_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:text="外出原因"
+                        android:textColor="@color/btn_black_font"
+                        android:textSize="@dimen/font_16_size" />
+
+                    <ImageView
+                        android:id="@+id/imv_callcar_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/padding_10"
+                        android:src="@mipmap/img_callcar_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_person" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <EditText
+                        android:id="@+id/edt_callcar_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:textSize="@dimen/font_16_size" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_1"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_cellphone" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <EditText
+                        android:id="@+id/edt_callcar_cellphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:textSize="@dimen/font_16_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lly_adress_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_from" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <TextView
+                        android:id="@+id/tv_callcar_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:textColor="@color/btn_black_font"
+                        android:textSize="@dimen/font_16_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/padding_10"
+                        android:src="@mipmap/img_callcar_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_1"
+                    android:layout_marginLeft="@dimen/padding_10"
+                    android:layout_marginRight="@dimen/padding_10"></View>
+
+                <LinearLayout
+                    android:id="@+id/lly_adress_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/img_callcar_to" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_ef"></View>
+
+                    <TextView
+                        android:id="@+id/tv_callcar_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_10"
+                        android:textColor="@color/btn_black_font"
+                        android:textSize="@dimen/font_16_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/padding_10"
+                        android:src="@mipmap/img_callcar_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_5"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_20"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:paddingTop="@dimen/padding_20">
+
+                <ImageView
+                    android:id="@+id/imv_car_type_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/img_callcar_01" />
+
+                <ImageView
+                    android:id="@+id/imv_car_type_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/img_callcar_03" />
+
+                <ImageView
+                    android:id="@+id/imv_car_type_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/img_callcar_02" />
+
+                <ImageView
+                    android:id="@+id/imv_car_type_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/img_callcar_04" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imv_car_type_chose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:padding="@dimen/padding_8"
+                android:src="@mipmap/img_carording_car_bg_01" />
+
+            <LinearLayout
+                android:id="@+id/lly_callcar_precoast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/padding_8"
+                android:visibility="invisible">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="约"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/font_14_size" />
+
+                    <TextView
+                        android:id="@+id/tv_callcar_pre_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:paddingRight="@dimen/padding_5"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/font_20_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/font_14_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_callcar_discount_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_15"
+                    android:layout_marginTop="@dimen/padding_5"
+                    android:background="@drawable/btn_shape_bg_red"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14_size" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_callcar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_53"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_shape_bg_red"
+                android:text="现在叫车"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

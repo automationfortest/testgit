@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <slzjandroid.slzjapplication.weights.DeletableEditText
+        android:id="@+id/edt_team_menagent_search"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginRight="@dimen/padding_15"
+        android:layout_marginTop="@dimen/padding_8"
+        android:background="@drawable/bg_edittext"
+        android:drawableLeft="@mipmap/img_search"
+        android:drawablePadding="6dp"
+        android:hint="请输入您要搜索的成员..."
+        android:paddingBottom="7dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="8dp"
+        android:paddingTop="7dp"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textCursorDrawable="@null"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="总人数 "
+                android:textColor="@color/edt_gray_font"
+                android:textSize="@dimen/font_14_size" />
+
+            <TextView
+                android:id="@+id/tv_team_managent_total_person"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_14_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text=" 人"
+                android:textColor="@color/edt_gray_font"
+                android:textSize="@dimen/font_14_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="管理员 " />
+
+            <TextView
+                android:id="@+id/tv_team_menagent_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="@color/title_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text=" 人" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        layout="@layout/layout_line" />
+
+
+    <slzjandroid.slzjapplication.weights.listview.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_team_menagent_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#19000000"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/bga_refresh_loding"
+        ptr:ptrMode="both" />
+</LinearLayout>

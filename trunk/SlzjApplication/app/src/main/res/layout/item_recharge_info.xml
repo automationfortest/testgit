@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值流水号:"
+        android:textSize="@dimen/font_16_size"
+        android:textColor="@color/btn_black_font"/>
+    <TextView
+        android:layout_marginLeft="@dimen/padding_6"
+        android:layout_weight="1"
+        android:id="@+id/tv_item_serial_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1919381920192911"
+        android:gravity="left"
+        android:textColor="@color/btn_black_font"
+        android:textSize="@dimen/font_14_size"
+        />
+    <TextView
+        android:id="@+id/tv_recharge_info_kind"
+        android:textSize="@dimen/font_12_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信支付"
+        android:gravity="right"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/padding_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/tv_recharge_info"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-3-21 18:23:23"
+            android:textSize="@dimen/padding_13"
+            android:textColor="@color/btn_black_font"/>
+        <TextView
+            android:id="@+id/tv_recharge_info_momey"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 5000元"
+            android:textColor="@color/title_bg"
+            android:gravity="right"
+            android:textSize="@dimen/padding_18"/>
+    </LinearLayout>
+</LinearLayout>

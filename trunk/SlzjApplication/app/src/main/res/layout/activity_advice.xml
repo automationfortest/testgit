@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/title_bg">
+
+        <ImageView
+
+            android:id="@+id/imv_advice_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="40dp"
+            android:paddingTop="@dimen/font_20_size"
+            android:src="@mipmap/img_arrow_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="@dimen/padding_15"
+            android:paddingTop="@dimen/font_20_size"
+            android:text="建议反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_20_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="40dp"
+            android:paddingTop="@dimen/font_20_size"
+            android:src="@mipmap/img_arrow_left"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_context"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_margin="9dp"
+        android:background="@drawable/shape_chose_adress_bg"
+        android:gravity="start"
+        android:hint="我们珍惜您的每一个字(限50字)"
+        android:maxLength="50"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btn_advice_commit"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="@dimen/padding_3"
+        android:background="@drawable/btn_shape_bg_red"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16_size" />
+</LinearLayout>

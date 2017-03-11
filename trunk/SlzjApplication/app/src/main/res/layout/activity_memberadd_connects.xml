@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" />
+
+    <slzjandroid.slzjapplication.weights.DeletableEditText
+        android:id="@+id/edt_team_menagent_search"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="@dimen/padding_10"
+        android:background="@drawable/bg_edittext"
+        android:drawableLeft="@mipmap/img_search"
+        android:drawablePadding="6dp"
+        android:hint="搜索联系人..."
+        android:paddingBottom="7dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="8dp"
+        android:paddingTop="7dp"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textCursorDrawable="@null"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <slzjandroid.slzjapplication.customView.SlidingLinearLayout
+            android:id="@+id/slidingview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+
+            <ListView
+                android:id="@+id/contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#000000"
+                android:divider="#00000000"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="visible" />
+        </slzjandroid.slzjapplication.customView.SlidingLinearLayout>
+
+        <slzjandroid.slzjapplication.customView.QuickAlphabeticBar
+            android:id="@+id/fast_scroller"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|right|center"
+            android:layout_marginTop="0dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/dic_background">
+
+        </slzjandroid.slzjapplication.customView.QuickAlphabeticBar>
+
+        <TextView
+            android:id="@+id/fast_position"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_margin="34dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:textColor="#404040"
+            android:textSize="48dip"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

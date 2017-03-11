@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ef"
+    android:orientation="vertical">
+
+
+    <slzjandroid.slzjapplication.customView.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_1"
+        android:layout_marginTop="@dimen/padding_10"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/padding_10">
+
+        <TextView
+            android:id="@+id/tv_travelin_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="行程中"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_20_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_22">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="司          机"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_driver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="车          型"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_cartype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="车   牌   号"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_car_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="乘   车   人"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_cellphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_10"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="费 用 归 属"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_costs_attributable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="用 车 原 因"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="出   发   地"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_adress_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="目   的   地"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_adress_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+
+                    android:text="上 车 时 间"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_geton_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lly_travelin_getdown_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/get_down_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:text="下 车 时 间"
+                    android:textColor="@color/edt_gray_font"
+                    android:textSize="@dimen/font_16_size" />
+
+                <TextView
+                    android:id="@+id/tv_travelin_getdown_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:textColor="@color/btn_black_font"
+                    android:textSize="@dimen/font_16_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_20"
+        android:paddingTop="@dimen/padding_28">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/img_carordering_bg_arrow" />
+
+        <LinearLayout
+            android:id="@+id/lly_travelin_coast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/padding_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际支付金额"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_14_size" />
+
+            <TextView
+                android:id="@+id/tv_travelin_pre_coast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_20_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/font_14_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

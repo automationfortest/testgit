@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProductFragment"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/title_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/activity_common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fly_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/img_banner" />
+
+            <LinearLayout
+                android:id="@+id/dots_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+        </FrameLayout>
+
+
+        <GridView
+            android:layout_weight="1"
+            android:id="@+id/gv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fly_pager"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:focusable="true"
+           >
+
+        </GridView>
+    </LinearLayout>
+</RelativeLayout>
